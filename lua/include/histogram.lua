@@ -140,7 +140,7 @@ end
 function histogram:print(prefix)
 	if self.dirty then self:calc() end
 
-	printf("%sSamples: %d, Average: %.1f ns, StdDev: %.1f ns, Quartiles: %.1f/%.1f/%.1f ns", prefix and ("[" .. prefix .. "] ") or "", self.numSamples, self.avg, self.stdDev, unpack(self.quarts))
+	printf("%sSamples: %d, Min: %.1f ns, Max: %.1f ns, Average: %.1f ns, StdDev: %.1f ns, Quartiles: %.1f/%.1f/%.1f ns", prefix and ("[" .. prefix .. "] ") or "", self.numSamples, self.minimum, self.maximum, self.avg, self.stdDev, unpack(self.quarts))
 end
 
 function histogram:save(file)
