@@ -100,6 +100,7 @@ function macToU48(mac)
 end
 
 function master(...)
+	printf("[DEPRECATED] This script is deprecated, use https://github.com/atheurer/lua-trafficgen instead.");
 	local testParams = getTestParams()
 	local finalValidation = false
 	local prevRate = 0
